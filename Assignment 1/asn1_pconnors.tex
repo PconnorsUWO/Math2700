@@ -1,0 +1,157 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Page settings
+\geometry{letterpaper, margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Math 2700B Assignment 1 Winter 2025}
+\lhead{Patrick Cauilan Connors}
+\rfoot{Page \thepage}
+
+% Theorem styles
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+% Title
+\title{Math 2700B Assignment 1 \\ Winter 2025}
+\author{Your Name \\ Student ID: 251313609}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Instructions for GradeScope}
+
+\begin{itemize}
+    \item You may handwrite your answers or type them. Only type solutions if you are able to type the appropriate symbols. If typed, use at least a 12pt font, with one question per page. You can then directly submit the PDF file to GradeScope.
+    \item \textbf{If handwritten on a tablet:}
+    \begin{itemize}
+        \item You can save your handwritten solutions to PDF files and upload the PDF files to the GradeScope website.
+        \item You then do not have to scan your solutions.
+    \end{itemize}
+    \item \textbf{If handwritten on paper:}
+    \begin{itemize}
+        \item Don’t erase or cross out more than a word or two.
+        \item Only write on one side of the page. Use dark, large, neat writing.
+        \item If you have a real scanner, great! Most people will scan their solutions using their phone. Use one of the recommended apps: For iOS, use \texttt{Scannable by Evernote} or \texttt{Genius Scan}. For Android, use \texttt{Genius Scan}. Do not just take regular photos. Read the pages at the end of this document for GradeScope’s instructions.
+        \item When scanning, have good lighting and try to avoid shadows.
+        \item It is best to have one question per scan. If the solution is short, fold the page in half and scan just the half it is on, so there isn’t so much blank space. Or, you can scan and then crop the scan.
+        \item You don’t need to scan parts (a), (b), etc. separately or put them on separate pages.
+        \item It works well to scan each question separately and produce one PDF file with one question per page. Most scanning apps will automatically combine your images into one PDF file.
+        \item You must check the quality of your scans afterwards, and rescan if needed.
+    \end{itemize}
+    \item You must access GradeScope by clicking on the link on the course OWL Brightspace page. You do not need to create a GradeScope account or use a course access code.
+    \item You can resubmit your work any number of times until the deadline.
+    \item Don’t forget to accurately match questions to pages. If you do this incorrectly, the grader will not see your solution and will give you zero.
+    \item See the GradeScope help website for lots of information: \url{https://help.gradescope.com/}
+    \begin{itemize}
+        \item Select “Student Center” and then either “Scanning Work on a Mobile Device” or “Submitting an Assignment”.
+    \end{itemize}
+\end{itemize}
+
+\section*{Instructions for Writing Solutions}
+
+\begin{itemize}
+    \item Homework is graded both on correctness and on presentation/style.
+    \item Show all the steps of your calculations and justify any statements made. However, do not show any rough work that isn’t needed to justify your answers.
+    \item Do not cross out or erase more than a word or two. If you write each final solution on a new page, it’s easy to start over on a fresh page when you’ve made a large error.
+    \item You should do the work on your own. Read the course syllabus for the rules about scholastic offenses, which include sharing solutions with others, uploading material to a website, viewing material of others or on a website (even if you don’t use it), etc. The penalty for cheating on homework will be a grade of 0 on the homework set as well as a penalty of negative 5\% on the overall course grade.
+\end{itemize}
+
+\newpage
+
+\section*{Problems}
+
+\begin{enumerate}
+
+    \item \textbf{Prove that \( V = \mathbb{R}^2 \) with addition defined as}
+    \[
+    (x_1, y_1) \oplus (x_2, y_2) \equiv (x_1 + x_2, y_1 + y_2 + 1), \quad (x_1, y_1), (x_2, y_2) \in V
+    \]
+    \textbf{and scalar multiplication defined as}
+    \[
+    a \odot (x, y) \equiv (ax, ay + a - 1), \quad (x, y) \in V, \ a \in \mathbb{R}
+    \]
+    \textbf{is a real vector space under these operations.}
+
+    \vspace{2in}
+
+    \item \textbf{Which of the following sets \( W \) are subspaces of the given vector space \( V \) over the field \( F \)? Support your answer.}
+    \begin{enumerate}[label=(\alph*)]
+        \item \( V = F(\mathbb{R}, \mathbb{R}), \ F = \mathbb{R} \) \\
+        \( W = \{ f \mid f(x) \geq 0, \ \forall x \in \mathbb{R} \} \)
+        
+        \vspace{1.5in}
+        
+        \item \( V = F(\mathbb{R}, \mathbb{R}), \ F = \mathbb{R} \) \\
+        \( W = \{ f \mid f(x + y) = f(x) + f(y), \ \forall x, y \in \mathbb{R} \} \)
+        
+        \vspace{1.5in}
+    \end{enumerate}
+
+    \item Let \( V \) be an \( F \)-vector space. Let \( W_1 \) and \( W_2 \) be subspaces of \( V \). A vector space \( W \) is called the direct sum of \( W_1 \) and \( W_2 \) if \( W_1 \cap W_2 = \{0\} \) and \( W = W_1 + W_2 \) where
+    \[
+    W_1 + W_2 = \{ w_1 + w_2 \mid w_1 \in W_1, \ w_2 \in W_2 \}
+    \]
+    We denote this direct sum by \( W = W_1 \oplus W_2 \).
+    \begin{enumerate}[label=(\alph*)]
+        \item Prove that \( W_1 + W_2 \) is a subspace of \( V \) that contains both \( W_1 \) and \( W_2 \).
+        
+        \vspace{2in}
+        
+        \item Prove that any subspace of \( V \) that contains both \( W_1 \) and \( W_2 \) must contain \( W_1 + W_2 \).
+        
+        \vspace{2in}
+        
+        \item Show that a vector space \( W \) is a direct sum of subspaces \( W_1 \) and \( W_2 \) if and only if each vector in \( W \) can be written uniquely as \( x_1 + x_2 \) where \( x_1 \in W_1 \), \( x_2 \in W_2 \).
+        
+        \vspace{2in}
+    \end{enumerate}
+
+    \item A function \( g \in F(\mathbb{R}, \mathbb{R}) \) is called an \textbf{even function} if \( g(-t) = g(t) \) for all \( t \in \mathbb{R} \) and is called an \textbf{odd function} if \( g(-t) = -g(t) \).
+    \begin{enumerate}[label=(\alph*)]
+        \item Prove that \( F^+(\mathbb{R}, \mathbb{R}) \), the set of even functions in \( F(\mathbb{R}, \mathbb{R}) \), and \( F^-(\mathbb{R}, \mathbb{R}) \), the set of odd functions in \( F(\mathbb{R}, \mathbb{R}) \), are both subspaces of \( F(\mathbb{R}, \mathbb{R}) \).
+        
+        \vspace{2in}
+        
+        \item Prove that \( F(\mathbb{R}, \mathbb{R}) = F^+(\mathbb{R}, \mathbb{R}) \oplus F^-(\mathbb{R}, \mathbb{R}) \).
+        
+        \vspace{2in}
+    \end{enumerate}
+
+    \item \textbf{(a) Are the following subsets of \( V \) linearly independent or linearly dependent? If dependent, find a linear dependence relation.}
+    \begin{enumerate}[label=(i)]
+        \item \( V = F([0, 1], \mathbb{R}) \); \( S = \left\{ \frac{1}{x^2 + x - 6}, \ \frac{1}{x^2 - 5x + 6}, \ \frac{1}{x^2 - 9} \right\} \)
+        
+        \vspace{2in}
+        
+        \item \( V = F(\mathbb{R}, \mathbb{R}) \); \( S = \{ x, e^x, e^{2x} \} \)
+        
+        \vspace{2in}
+    \end{enumerate}
+
+    \item \textbf{(b) Let}
+    \[
+    E_{11} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \quad
+    E_{12} = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}, \quad
+    E_{21} = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}, \quad
+    E_{22} = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}
+    \]
+    \textbf{be matrices in \( M_{2 \times 2}(\mathbb{R}) \). Show that}
+    \[
+    M_{2 \times 2}(\mathbb{R}) = \text{Span}_{\mathbb{R}}\{ E_{11}, E_{12}, E_{21}, E_{22} \} = \text{Span}_{\mathbb{R}}\{ E_{12} + E_{21} + E_{22}, \ E_{11} + E_{22}, \ E_{12} + E_{21}, \ E_{11} + E_{12} + E_{22} \}
+    \]
+    
+    \vspace{3in}
+
+\end{enumerate}
+
+\end{document}
