@@ -68,90 +68,936 @@
 
 \newpage
 
-\section*{Problems}
+\subsection*{Problem 1}
+\cite{proofwiki}
+We aim to show that \( V = \mathbb{R}^2 \), equipped with the operations
 
 \begin{enumerate}
-
-    \item \textbf{Prove that \( V = \mathbb{R}^2 \) with addition defined as}
+    \item \textbf{Vector Addition} \(\oplus\):
     \[
-    (x_1, y_1) \oplus (x_2, y_2) \equiv (x_1 + x_2, y_1 + y_2 + 1), \quad (x_1, y_1), (x_2, y_2) \in V
+    (x_1, y_1) \oplus (x_2, y_2) = \bigl(x_1 + x_2,\; y_1 + y_2 + 1\bigr),
     \]
-    \textbf{and scalar multiplication defined as}
+    \item \textbf{Scalar Multiplication} \(\odot\):
     \[
-    a \odot (x, y) \equiv (ax, ay + a - 1), \quad (x, y) \in V, \ a \in \mathbb{R}
+    a \odot (x, y) = \bigl(a x,\; a y + a - 1\bigr),
     \]
-    \textbf{is a real vector space under these operations.}
-
-    \vspace{2in}
-
-    \item \textbf{Which of the following sets \( W \) are subspaces of the given vector space \( V \) over the field \( F \)? Support your answer.}
-    \begin{enumerate}[label=(\alph*)]
-        \item \( V = F(\mathbb{R}, \mathbb{R}), \ F = \mathbb{R} \) \\
-        \( W = \{ f \mid f(x) \geq 0, \ \forall x \in \mathbb{R} \} \)
-        
-        \vspace{1.5in}
-        
-        \item \( V = F(\mathbb{R}, \mathbb{R}), \ F = \mathbb{R} \) \\
-        \( W = \{ f \mid f(x + y) = f(x) + f(y), \ \forall x, y \in \mathbb{R} \} \)
-        
-        \vspace{1.5in}
-    \end{enumerate}
-
-    \item Let \( V \) be an \( F \)-vector space. Let \( W_1 \) and \( W_2 \) be subspaces of \( V \). A vector space \( W \) is called the direct sum of \( W_1 \) and \( W_2 \) if \( W_1 \cap W_2 = \{0\} \) and \( W = W_1 + W_2 \) where
-    \[
-    W_1 + W_2 = \{ w_1 + w_2 \mid w_1 \in W_1, \ w_2 \in W_2 \}
-    \]
-    We denote this direct sum by \( W = W_1 \oplus W_2 \).
-    \begin{enumerate}[label=(\alph*)]
-        \item Prove that \( W_1 + W_2 \) is a subspace of \( V \) that contains both \( W_1 \) and \( W_2 \).
-        
-        \vspace{2in}
-        
-        \item Prove that any subspace of \( V \) that contains both \( W_1 \) and \( W_2 \) must contain \( W_1 + W_2 \).
-        
-        \vspace{2in}
-        
-        \item Show that a vector space \( W \) is a direct sum of subspaces \( W_1 \) and \( W_2 \) if and only if each vector in \( W \) can be written uniquely as \( x_1 + x_2 \) where \( x_1 \in W_1 \), \( x_2 \in W_2 \).
-        
-        \vspace{2in}
-    \end{enumerate}
-
-    \item A function \( g \in F(\mathbb{R}, \mathbb{R}) \) is called an \textbf{even function} if \( g(-t) = g(t) \) for all \( t \in \mathbb{R} \) and is called an \textbf{odd function} if \( g(-t) = -g(t) \).
-    \begin{enumerate}[label=(\alph*)]
-        \item Prove that \( F^+(\mathbb{R}, \mathbb{R}) \), the set of even functions in \( F(\mathbb{R}, \mathbb{R}) \), and \( F^-(\mathbb{R}, \mathbb{R}) \), the set of odd functions in \( F(\mathbb{R}, \mathbb{R}) \), are both subspaces of \( F(\mathbb{R}, \mathbb{R}) \).
-        
-        \vspace{2in}
-        
-        \item Prove that \( F(\mathbb{R}, \mathbb{R}) = F^+(\mathbb{R}, \mathbb{R}) \oplus F^-(\mathbb{R}, \mathbb{R}) \).
-        
-        \vspace{2in}
-    \end{enumerate}
-
-    \item \textbf{(a) Are the following subsets of \( V \) linearly independent or linearly dependent? If dependent, find a linear dependence relation.}
-    \begin{enumerate}[label=(i)]
-        \item \( V = F([0, 1], \mathbb{R}) \); \( S = \left\{ \frac{1}{x^2 + x - 6}, \ \frac{1}{x^2 - 5x + 6}, \ \frac{1}{x^2 - 9} \right\} \)
-        
-        \vspace{2in}
-        
-        \item \( V = F(\mathbb{R}, \mathbb{R}) \); \( S = \{ x, e^x, e^{2x} \} \)
-        
-        \vspace{2in}
-    \end{enumerate}
-
-    \item \textbf{(b) Let}
-    \[
-    E_{11} = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \quad
-    E_{12} = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}, \quad
-    E_{21} = \begin{pmatrix} 0 & 0 \\ 1 & 0 \end{pmatrix}, \quad
-    E_{22} = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}
-    \]
-    \textbf{be matrices in \( M_{2 \times 2}(\mathbb{R}) \). Show that}
-    \[
-    M_{2 \times 2}(\mathbb{R}) = \text{Span}_{\mathbb{R}}\{ E_{11}, E_{12}, E_{21}, E_{22} \} = \text{Span}_{\mathbb{R}}\{ E_{12} + E_{21} + E_{22}, \ E_{11} + E_{22}, \ E_{12} + E_{21}, \ E_{11} + E_{12} + E_{22} \}
-    \]
-    
-    \vspace{3in}
-
 \end{enumerate}
 
+satisfy all the axioms of a real vector space over \(\mathbb{R}\).
+
+\paragraph{Proof}
+
+\begin{enumerate}
+    \item \((V, \oplus)\) is an abelian group.
+    \item \(\odot : \mathbb{R} \times V \to V\) satisfies the usual scalar‐multiplication axioms:
+    \begin{enumerate}
+        \item \(a \odot (\mathbf{u} \oplus \mathbf{v}) = (a \odot \mathbf{u}) \oplus (a \odot \mathbf{v})\),
+        \item \((a + b) \odot \mathbf{u} = (a \odot \mathbf{u}) \oplus (b \odot \mathbf{u})\),
+        \item \((ab) \odot \mathbf{u} = a \odot (b \odot \mathbf{u})\),
+        \item \(1 \odot \mathbf{u} = \mathbf{u}\).
+    \end{enumerate}
+\end{enumerate}
+
+We set \(V = \mathbb{R}^2\) with the operations:
+
+\begin{itemize}
+    \item \textbf{Vector addition} \(\oplus\):
+    \[
+    (x_1, y_1) \;\oplus\; (x_2, y_2) \;=\;\bigl(x_1 + x_2,\; y_1 + y_2 \;+\; 1\bigr),
+    \]
+    \item \textbf{Scalar multiplication} \(\odot\):
+    \[
+    a \;\odot\; (x,y) \;=\;\bigl(a\,x,\; a\,y \;+\; a \;-\; 1\bigr),
+    \]
+\end{itemize}
+where \(a\in \mathbb{R}\) and \((x,y) \in \mathbb{R}^2\).
+
+---
+\newpage
+\subsubsection*{1. \((V, \oplus)\) is an Abelian Group}
+
+We need to check the following group axioms:
+
+\begin{enumerate}
+    \item \textbf{Associativity} of \(\oplus\):
+    \[
+    \bigl((x_1,y_1)\oplus(x_2,y_2)\bigr)\oplus(x_3,y_3)
+    \;=\;(x_1,y_1)\oplus\bigl((x_2,y_2)\oplus(x_3,y_3)\bigr).
+    \]
+    
+    \textbf{Proof:}
+    
+    - **LHS**:
+    \[
+    (x_1,y_1)\oplus(x_2,y_2) = (x_1 + x_2,\; y_1 + y_2 + 1),
+    \]
+    so
+    \[
+    \bigl((x_1,y_1)\oplus(x_2,y_2)\bigr)\oplus(x_3,y_3)
+    = (x_1 + x_2,\; y_1 + y_2 + 1)\oplus(x_3,y_3).
+    \]
+    By definition of \(\oplus\),
+    \[
+    = \Bigl((x_1 + x_2) + x_3,\; (y_1 + y_2 + 1) + y_3 + 1\Bigr)
+    = (x_1 + x_2 + x_3,\; y_1 + y_2 + y_3 + 2).
+    \]
+    
+    - **RHS**:
+    \[
+    (x_2,y_2)\oplus(x_3,y_3) = (x_2 + x_3,\; y_2 + y_3 + 1),
+    \]
+    so
+    \[
+    (x_1,y_1)\oplus\bigl((x_2,y_2)\oplus(x_3,y_3)\bigr)
+    = (x_1,y_1)\oplus(x_2 + x_3,\; y_2 + y_3 + 1).
+    \]
+    Hence
+    \[
+    = \Bigl(x_1 + (x_2 + x_3),\; y_1 + (y_2 + y_3 + 1) + 1\Bigr)
+    = (x_1 + x_2 + x_3,\; y_1 + y_2 + y_3 + 2).
+    \]
+    
+    Both sides agree. Thus, \(\oplus\) is associative.
+    
+    \item \textbf{Commutativity} of \(\oplus\):
+    \[
+    (x_1,y_1) \oplus (x_2,y_2) 
+    = (x_1 + x_2,\; y_1 + y_2 + 1) 
+    = (x_2 + x_1,\; y_2 + y_1 + 1) 
+    = (x_2,y_2) \oplus (x_1,y_1).
+    \]
+    
+    \item \textbf{Existence of a Zero (Identity) Element} \(\mathbf{0}\):
+    
+    We want \((x,y)\oplus \mathbf{0} = (x,y)\). By inspection, set
+    \[
+    \mathbf{0} = (0,\;-1).
+    \]
+    Indeed,
+    \[
+    (x,y)\oplus(0,-1) = (x + 0,\; y + (-1) + 1) = (x,y).
+    \]
+    
+    \item \textbf{Existence of Additive Inverses}:
+    
+    We want \((x,y) \oplus (u,v) = \mathbf{0} = (0,-1)\). From
+    \[
+    (x + u,\; y + v + 1) = (0,\;-1),
+    \]
+    it follows that \(u = -x\) and \(y + v + 1 = -1\), so \(v = -2 - y\).  
+    Hence, the inverse of \((x,y)\) is
+    \[
+    -(x,y) = (-x,\; -y - 2).
+    \]
+\end{enumerate}
+
+Thus, \((V, \oplus)\) is indeed an abelian group.
+
+---
+
+\subsubsection*{2. \(\odot\) Satisfies the Scalar Multiplication Axioms}
+
+Let \(a,b \in \mathbb{R}\) and \((x_1,y_1), (x_2,y_2) \in V\). We check the usual four conditions:
+
+\subsubsection*{(1) Distributivity of Scalar Multiplication over Vector Addition}
+
+\textbf{Claim}:  
+\[
+a \odot \bigl((x_1,y_1)\oplus(x_2,y_2)\bigr) = \bigl(a\odot (x_1,y_1)\bigr) \oplus \bigl(a\odot (x_2,y_2)\bigr).
+\]
+
+\textbf{Proof:}
+
+- **LHS**:
+\[
+(x_1,y_1)\oplus(x_2,y_2) = (x_1 + x_2,\; y_1 + y_2 + 1),
+\]
+so
+\[
+a \odot \bigl((x_1,y_1)\oplus (x_2,y_2)\bigr) = a \odot (x_1 + x_2,\; y_1 + y_2 + 1).
+\]
+By definition of \(\odot\),
+\[
+= \Bigl(a(x_1 + x_2),\; a(y_1 + y_2 + 1) + a - 1\Bigr).
+\]
+Expand in the second coordinate:
+\[
+a(y_1 + y_2 + 1) + a - 1 = a y_1 + a y_2 + a + a - 1 = a y_1 + a y_2 + 2a - 1.
+\]
+So,
+\[
+\text{LHS} = \bigl(a x_1 + a x_2,\; a y_1 + a y_2 + 2a - 1\bigr).
+\]
+
+- **RHS**:
+\[
+a \odot (x_1,y_1) = (a x_1,\; a y_1 + a - 1),
+\]
+\[
+a \odot (x_2,y_2) = (a x_2,\; a y_2 + a - 1).
+\]
+Then,
+\[
+\bigl(a \odot (x_1,y_1)\bigr) \oplus \bigl(a \odot (x_2,y_2)\bigr) = (a x_1,\; a y_1 + a - 1) \oplus (a x_2,\; a y_2 + a - 1).
+\]
+By definition of \(\oplus\),
+\[
+= \Bigl(a x_1 + a x_2,\; (a y_1 + a - 1) + (a y_2 + a - 1) + 1\Bigr).
+\]
+Combine like terms in the second coordinate:
+\[
+= \Bigl(a x_1 + a x_2,\; a y_1 + a y_2 + 2a - 1\Bigr).
+\]
+This agrees exactly with the LHS. Hence, distributivity over \(\oplus\) holds.
+
+\subsubsection*{(2) Distributivity of Scalar Multiplication over Real‐Field Addition}
+
+\textbf{Claim}:  
+\[
+(a + b) \odot (x,y) = \bigl(a \odot (x,y)\bigr) \oplus \bigl(b \odot (x,y)\bigr).
+\]
+
+\textbf{Proof:}
+
+- **LHS**:
+\[
+(a + b) \odot (x,y) = \bigl((a + b)x,\; (a + b)y + (a + b) - 1\bigr).
+\]
+
+- **RHS**:
+\[
+a \odot (x,y) = (a x,\; a y + a - 1),
+\]
+\[
+b \odot (x,y) = (b x,\; b y + b - 1).
+\]
+Then,
+\[
+(a \odot (x,y)) \oplus (b \odot (x,y)) = (a x,\; a y + a - 1) \oplus (b x,\; b y + b - 1).
+\]
+By definition of \(\oplus\),
+\[
+= \Bigl(a x + b x,\; (a y + a - 1) + (b y + b - 1) + 1\Bigr).
+\]
+Combine the second coordinate carefully:
+\[
+= \Bigl((a + b)x,\; (a + b)y + (a + b) - 1\Bigr).
+\]
+This matches the LHS exactly. Hence, scalar‐addition distributivity holds.
+
+\subsubsection*{(3) Compatibility of Scalar Multiplication with Real‐Field Multiplication}
+
+\textbf{Claim}:
+\[
+(a b) \odot (x,y) = a \odot \bigl(b \odot (x,y)\bigr).
+\]
+
+\textbf{Proof:}
+
+- **LHS**:
+\[
+(a b) \odot (x,y) = \Bigl((a b)x,\; (a b)y + (a b) - 1\Bigr).
+\]
+
+- **RHS**:
+First compute \(b \odot (x,y)\):
+\[
+b \odot (x,y) = (b x,\; b y + b - 1).
+\]
+Then,
+\[
+a \odot \bigl(b \odot (x,y)\bigr) = a \odot (b x,\; b y + b - 1) = \Bigl(a(b x),\; a(b y + b - 1) + a - 1\Bigr).
+\]
+Simplify the second coordinate:
+\[
+a(b y + b - 1) + a - 1 = a b y + a b - a + a - 1 = a b y + a b - 1.
+\]
+So, the RHS becomes
+\[
+(a b x,\; a b y + a b - 1).
+\]
+Since \(a b x = (a b)x\) and \(a b y + a b - 1 = (a b)y + (a b) - 1\), both sides agree.
+
+Thus, compatibility with field multiplication holds.
+
+\subsubsection*{(4) Multiplying by 1 Acts as the Identity}
+
+\textbf{Claim}:
+\[
+1 \odot (x,y) = (x,y).
+\]
+
+\textbf{Proof:}
+By definition of \(\odot\),
+\[
+1 \odot (x,y) = \bigl(1 \cdot x,\; 1 \cdot y + 1 - 1\bigr) = (x,\; y).
+\]
+So, the unit scalar \(1 \in \mathbb{R}\) acts as the identity on vectors.
+
+\qed
+\subsection*{Conclusion}
+
+All eight vector‐space axioms (the abelian‐group axioms for \(\oplus\) and the four scalar‐multiplication axioms) are satisfied by \(\bigl(\mathbb{R}^2,\oplus,\odot\bigr)\). Therefore, \( V = \mathbb{R}^2 \) with these custom operations is indeed a real vector space.
+\newpage
+
+\subsection*{Problem 2}
+
+We want to determine if each given subset \( W \subseteq V \) is a subspace of the vector space \( V \). Subset \( W \) of a vector space \( V \) over a field \( F \) is a \textbf{subspace} if and only if:
+
+\begin{enumerate}[label=(\alph*)]
+    \item \( V = F(\mathbb{R}, \mathbb{R}), \ F = \mathbb{R} \) \\
+    \( W = \{ f \mid f(x) \geq 0, \ \forall x \in \mathbb{R} \} \)
+    
+    \item \( V = F(\mathbb{R}, \mathbb{R}), \ F = \mathbb{R} \) \\
+    \( W = \{ f \mid f(x + y) = f(x) + f(y), \ \forall x, y \in \mathbb{R} \} \)
+\end{enumerate}
+
+\subsubsection*{Solution}
+
+
+\begin{enumerate}
+    \item \( W \) is \textbf{nonempty}, and in particular, contains the \( 0 \)-vector (i.e., the zero function when \( V \) is a function space).
+    \item \( W \) is \textbf{closed under addition}: for any \( u, v \in W \), we have \( u + v \in W \).
+    \item \( W \) is \textbf{closed under scalar multiplication}: for any \( u \in W \) and any scalar \( \alpha \in F \), we have \( \alpha u \in W \).
+\end{enumerate}
+
+\paragraph{(a) \( V = F(\mathbb{R}, \mathbb{R}),\quad W = \{ f : \mathbb{R} \to \mathbb{R} \mid f(x) \geq 0,\ \forall x \in \mathbb{R} \} \)}
+
+\begin{enumerate}
+    \item \textbf{Nonempty and contains the zero function.} \\
+    The zero function \( f_0(x) = 0 \) for all \( x \) satisfies \( f_0(x) \geq 0 \). Hence, \( f_0 \in W \), so \( W \) is nonempty.
+    
+    \item \textbf{Closed under addition.} \\
+    Let \( f, g \in W \). Then for all \( x \in \mathbb{R} \),
+    \[
+        f(x) \geq 0 \quad \text{and} \quad g(x) \geq 0.
+    \]
+    Therefore,
+    \[
+        (f + g)(x) = f(x) + g(x) \geq 0 + 0 = 0.
+    \]
+    Thus, \( f + g \in W \), and \( W \) is closed under addition.
+    
+    \item \textbf{Closed under scalar multiplication.} \\
+    Consider a nonzero scalar \( \alpha \in \mathbb{R} \) and a function \( f \in W \). If \( \alpha < 0 \), then for any \( x \) where \( f(x) > 0 \),
+    \[
+        (\alpha f)(x) = \alpha \cdot f(x) < 0.
+    \]
+    This violates the condition \( (\alpha f)(x) \geq 0 \). Therefore, \( \alpha f \notin W \) when \( \alpha < 0 \).
+\end{enumerate}
+
+\textbf{Conclusion:} Since \( W \) is not closed under scalar multiplication by negative scalars, \( W \) is \textbf{not} a subspace of \( V \).
+
+\paragraph{(b) \( V = F(\mathbb{R}, \mathbb{R}),\quad W = \{ f : \mathbb{R} \to \mathbb{R} \mid f(x + y) = f(x) + f(y),\ \forall x, y \in \mathbb{R} \} \)}
+
+These functions are known as \textbf{additive functions}.
+
+\begin{enumerate}
+    \item \textbf{Nonempty and contains the zero function.} \\
+    The zero function \( f_0 \) satisfies
+    \[
+        f_0(x + y) = 0 = 0 + 0 = f_0(x) + f_0(y).
+    \]
+    Hence, \( f_0 \in W \), so \( W \) is nonempty.
+    
+    \item \textbf{Closed under addition.} \\
+    Let \( f, g \in W \). Then for all \( x, y \in \mathbb{R} \),
+    \[
+        f(x + y) = f(x) + f(y) \quad \text{and} \quad g(x + y) = g(x) + g(y).
+    \]
+    Therefore,
+    \[
+        (f + g)(x + y) = f(x + y) + g(x + y) = [f(x) + f(y)] + [g(x) + g(y)] = [f(x) + g(x)] + [f(y) + g(y)] = (f + g)(x) + (f + g)(y).
+    \]
+    Thus, \( f + g \in W \), and \( W \) is closed under addition.
+    
+    \item \textbf{Closed under scalar multiplication.} \\
+    Let \( f \in W \) and \( \alpha \in \mathbb{R} \). Then for all \( x, y \in \mathbb{R} \),
+    \[
+        (\alpha f)(x + y) = \alpha f(x + y) = \alpha [f(x) + f(y)] = \alpha f(x) + \alpha f(y) = (\alpha f)(x) + (\alpha f)(y).
+    \]
+    Hence, \( \alpha f \in W \), and \( W \) is closed under scalar multiplication.
+\end{enumerate}
+
+\textbf{Conclusion:} Since \( W \) is nonempty and closed under both addition and scalar multiplication, \( W \) \textbf{is} a subspace of \( V \).
+
+\subsubsection*{Final Answer}
+
+\begin{enumerate}[label=(\alph*)]
+    \item The set \( W = \{ f \mid f(x) \geq 0 \text{ for all } x \in \mathbb{R} \} \) is \textbf{not} a subspace of \( V \) because it is not closed under scalar multiplication by negative scalars.
+    
+    \item The set \( W = \{ f \mid f(x + y) = f(x) + f(y) \text{ for all } x, y \in \mathbb{R} \} \) \textbf{is} a subspace of \( V \) as it contains the zero function and is closed under both addition and scalar multiplication.
+\end{enumerate}
+
+\newpage
+
+\subsection*{Problem 3}
+
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Prove that \( W_1 + W_2 \) is a subspace of \( V \) that contains both \( W_1 \) and \( W_2 \).}
+    
+    \begin{proof}
+        To show that \( W_1 + W_2 \) is a subspace of \( V \), we need to verify three properties:
+        
+        \begin{enumerate}[label=\arabic*.]
+            \item \textbf{Non-emptiness:}  
+                The zero vector \( 0 \) is in \( W_1 \) and \( W_2 \) since they are subspaces. Thus, \( 0 = 0 + 0 \in W_1 + W_2 \).
+            
+            \item \textbf{Closure under addition:}  
+                Let \( u, v \in W_1 + W_2 \). By definition, there exist vectors \( w_1, w_1' \in W_1 \) and \( w_2, w_2' \in W_2 \) such that
+                \[
+                u = w_1 + w_2 \quad \text{and} \quad v = w_1' + w_2'.
+                \]
+                Then,
+                \[
+                u + v = (w_1 + w_2) + (w_1' + w_2') = (w_1 + w_1') + (w_2 + w_2').
+                \]
+                Since \( W_1 \) and \( W_2 \) are subspaces, \( w_1 + w_1' \in W_1 \) and \( w_2 + w_2' \in W_2 \). Therefore, \( u + v \in W_1 + W_2 \).
+            
+            \item \textbf{Closure under scalar multiplication:}  
+                Let \( u \in W_1 + W_2 \) and \( \alpha \in F \). Then \( u = w_1 + w_2 \) for some \( w_1 \in W_1 \) and \( w_2 \in W_2 \). Thus,
+                \[
+                \alpha u = \alpha(w_1 + w_2) = \alpha w_1 + \alpha w_2.
+                \]
+                Since \( W_1 \) and \( W_2 \) are subspaces, \( \alpha w_1 \in W_1 \) and \( \alpha w_2 \in W_2 \). Hence, \( \alpha u \in W_1 + W_2 \).
+        \end{enumerate}
+        
+        Additionally, \( W_1 + W_2 \) contains both \( W_1 \) and \( W_2 \):
+        \[
+        \text{For } w_1 \in W_1, \quad w_1 = w_1 + 0 \in W_1 + W_2.
+        \]
+        \[
+        \text{For } w_2 \in W_2, \quad w_2 = 0 + w_2 \in W_1 + W_2.
+        \]
+        
+        Therefore, \( W_1 + W_2 \) is a subspace of \( V \) containing both \( W_1 \) and \( W_2 \).
+    \end{proof}
+    
+    \item \textbf{Prove that any subspace of \( V \) that contains both \( W_1 \) and \( W_2 \) must contain \( W_1 + W_2 \).}
+    
+    \begin{proof}
+        Let \( U \) be a subspace of \( V \) such that \( W_1 \subseteq U \) and \( W_2 \subseteq U \). We aim to show that \( W_1 + W_2 \subseteq U \).
+        
+        Take any vector \( w \in W_1 + W_2 \). By definition, there exist \( w_1 \in W_1 \) and \( w_2 \in W_2 \) such that
+        \[
+        w = w_1 + w_2.
+        \]
+        Since \( W_1 \subseteq U \) and \( W_2 \subseteq U \), both \( w_1 \) and \( w_2 \) are in \( U \). Because \( U \) is a subspace, it is closed under addition, hence
+        \[
+        w = w_1 + w_2 \in U.
+        \]
+        
+        Since \( w \) was arbitrary, \( W_1 + W_2 \subseteq U \).
+    \end{proof}
+    
+    \item \textbf{Show that a vector space \( W \) is a direct sum of subspaces \( W_1 \) and \( W_2 \) if and only if each vector in \( W \) can be written uniquely as \( x_1 + x_2 \) where \( x_1 \in W_1 \) and \( x_2 \in W_2 \).}
+    
+    \begin{proof}
+        We need to prove both directions of the equivalence.
+        
+        \textbf{(\(\Rightarrow\)) Assume \( W = W_1 \oplus W_2 \).}
+        
+        By definition of direct sum:
+        \[
+        W = W_1 + W_2 \quad \text{and} \quad W_1 \cap W_2 = \{0\}.
+        \]
+        - \textbf{Existence:} Every \( w \in W \) can be written as \( w = x_1 + x_2 \) for some \( x_1 \in W_1 \) and \( x_2 \in W_2 \).
+        - \textbf{Uniqueness:} Suppose \( w = x_1 + x_2 = y_1 + y_2 \) with \( x_1, y_1 \in W_1 \) and \( x_2, y_2 \in W_2 \). Then,
+            \[
+            x_1 - y_1 = y_2 - x_2.
+            \]
+            The left side \( x_1 - y_1 \) is in \( W_1 \), and the right side \( y_2 - x_2 \) is in \( W_2 \). Therefore,
+            \[
+            x_1 - y_1 \in W_1 \cap W_2 = \{0\}.
+            \]
+            Hence, \( x_1 = y_1 \) and consequently \( x_2 = y_2 \). This proves uniqueness.
+        
+        \textbf{(\(\Leftarrow\)) Assume every \( w \in W \) can be written uniquely as \( w = x_1 + x_2 \) with \( x_1 \in W_1 \) and \( x_2 \in W_2 \).}
+        
+        - \textbf{Sum Equals \( W \):} By assumption, every \( w \in W \) is in \( W_1 + W_2 \), hence \( W = W_1 + W_2 \).
+        - \textbf{Intersection is Trivial:} Suppose \( v \in W_1 \cap W_2 \). Then \( v \) can be written as
+            \[
+            v = v + 0 = 0 + v,
+            \]
+            where \( v \in W_1 \) and \( 0 \in W_2 \), and \( 0 \in W_1 \) and \( v \in W_2 \). By uniqueness,
+            \[
+            v = 0.
+            \]
+            Therefore, \( W_1 \cap W_2 = \{0\} \).
+        
+        Combining these, \( W = W_1 \oplus W_2 \).
+    \end{proof}
+\end{enumerate}
+
+\subsection*{Conclusion}
+
+We have established that:
+\begin{itemize}
+    \item \( W_1 + W_2 \) is indeed a subspace containing both \( W_1 \) and \( W_2 \).
+    \item Any subspace containing \( W_1 \) and \( W_2 \) must also contain \( W_1 + W_2 \).
+    \item The direct sum \( W = W_1 \oplus W_2 \) is characterized by the unique decomposition of each vector in \( W \) as a sum of vectors from \( W_1 \) and \( W_2 \).
+\end{itemize}
+\qed
+
+\newpage
+
+\subsection*{Problem 4}
+
+We work over the vector space \(F(\mathbb{R}, \mathbb{R})\) of all real-valued functions on \(\mathbb{R}\). Recall that:
+\begin{itemize}
+    \item A function \(g\) is \textbf{even} if \(g(-t) = g(t)\) for all \(t \in \mathbb{R}\).
+    \item A function \(g\) is \textbf{odd} if \(g(-t) = -g(t)\) for all \(t \in \mathbb{R}\).
+\end{itemize}
+
+We denote
+\[
+F^+(\mathbb{R}, \mathbb{R}) = \{\,g \in F(\mathbb{R}, \mathbb{R}) : g(-t) = g(t)\,\}, 
+\]
+\[
+F^-(\mathbb{R}, \mathbb{R}) = \{\,g \in F(\mathbb{R}, \mathbb{R}) : g(-t) = -g(t)\,\}.
+\]
+
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Proving that \(F^+(\mathbb{R}, \mathbb{R})\) and \(F^-(\mathbb{R}, \mathbb{R})\) are Subspaces}
+    
+    To show that each set is a subspace of \(F(\mathbb{R}, \mathbb{R})\), we verify the following three properties:
+    
+    \begin{enumerate}[label=\arabic*.]
+        \item \textbf{Zero Function is in Each Subspace}
+        
+        \begin{itemize}
+            \item \textbf{Even Subspace \(F^+\):}  
+            The zero function \(0\) satisfies
+            \[
+                0(-t) = 0 = 0(t),
+            \]
+            so it is even.
+            
+            \item \textbf{Odd Subspace \(F^-\):}  
+            The zero function also satisfies
+            \[
+                0(-t) = 0 = -0(t),
+            \]
+            so it is odd.
+        \end{itemize}
+        
+        \item \textbf{Closed Under Addition}
+        
+        \begin{itemize}
+            \item \textbf{Even Subspace \(F^+\):}  
+            Let \(f, g \in F^+(\mathbb{R}, \mathbb{R})\). Then 
+            \[
+                f(-t) = f(t), \quad g(-t) = g(t) \quad \text{for all } t \in \mathbb{R}.
+            \]
+            Consider \((f + g)\). We have
+            \[
+                (f+g)(-t) = f(-t) + g(-t) = f(t) + g(t) = (f+g)(t).
+            \]
+            Thus \(f + g\) is even, so \(f + g \in F^+\).
+            
+            \item \textbf{Odd Subspace \(F^-\):}  
+            Let \(f, g \in F^-(\mathbb{R}, \mathbb{R})\). Then
+            \[
+                f(-t) = -f(t), \quad g(-t) = -g(t) \quad \text{for all } t \in \mathbb{R}.
+            \]
+            Consider \((f + g)\). We have
+            \[
+                (f+g)(-t) = f(-t) + g(-t) = -f(t) - g(t) = -(f+g)(t).
+            \]
+            Thus \(f + g\) is odd, so \(f + g \in F^-\).
+        \end{itemize}
+        
+        \newpage
+
+        \item \textbf{Closed Under Scalar Multiplication}
+        
+        \begin{itemize}
+            \item \textbf{Even Subspace \(F^+\):}  
+            Let \(f \in F^+(\mathbb{R}, \mathbb{R})\) and \(\alpha \in \mathbb{R}\). Then 
+            \[
+                f(-t) = f(t).
+            \]
+            Consider \(\alpha f\). We have
+            \[
+                (\alpha f)(-t) = \alpha f(-t) = \alpha f(t) = (\alpha f)(t).
+            \]
+            Hence \(\alpha f\) is even, so \(\alpha f \in F^+\).
+            
+            \item \textbf{Odd Subspace \(F^-\):}  
+            Let \(f \in F^-(\mathbb{R}, \mathbb{R})\) and \(\alpha \in \mathbb{R}\). Then
+            \[
+                f(-t) = -f(t).
+            \]
+            Consider \(\alpha f\). We have
+            \[
+                (\alpha f)(-t) = \alpha f(-t) = \alpha (-f(t)) = -\alpha f(t) = -(\alpha f)(t).
+            \]
+            Hence \(\alpha f\) is odd, so \(\alpha f \in F^-\).
+        \end{itemize}
+    \end{enumerate}
+    
+    Since all three properties are satisfied for both \(F^+(\mathbb{R}, \mathbb{R})\) and \(F^-(\mathbb{R}, \mathbb{R})\), both are indeed \textbf{subspaces} of \(F(\mathbb{R}, \mathbb{R})\).
+
+    \qed
+    
+    \item \textbf{Proving that \(F(\mathbb{R}, \mathbb{R}) = F^+(\mathbb{R}, \mathbb{R}) \oplus F^-(\mathbb{R}, \mathbb{R})\)}
+    
+    To establish that
+    \[
+        F(\mathbb{R}, \mathbb{R}) = F^+(\mathbb{R}, \mathbb{R}) \oplus F^-(\mathbb{R}, \mathbb{R}),
+    \]
+    we need to verify two conditions:
+    
+    \begin{enumerate}[label=\arabic*.]
+        \item \textbf{Every Function Decomposes into an Even and an Odd Part}
+        
+        Given any \(h \in F(\mathbb{R}, \mathbb{R})\), define
+        \[
+            h^+(t) = \frac{1}{2}\bigl(h(t) + h(-t)\bigr), \quad h^-(t) = \frac{1}{2}\bigl(h(t) - h(-t)\bigr).
+        \]
+        
+        \begin{itemize}
+            \item \textbf{\(h^+\) is Even:}
+            \[
+                h^+(-t) = \frac{1}{2}\bigl(h(-t) + h(t)\bigr) = \frac{1}{2}\bigl(h(t) + h(-t)\bigr) = h^+(t).
+            \]
+            
+            \item \textbf{\(h^-\) is Odd:}
+            \[
+                h^-(-t) = \frac{1}{2}\bigl(h(-t) - h(t)\bigr) = -\frac{1}{2}\bigl(h(t) - h(-t)\bigr) = -h^-(t).
+            \]
+        \end{itemize}
+        
+        Moreover,
+        \[
+            h(t) = \frac{1}{2}\bigl(h(t) + h(-t)\bigr) + \frac{1}{2}\bigl(h(t) - h(-t)\bigr) = h^+(t) + h^-(t).
+        \]
+        Hence every \(h \in F(\mathbb{R}, \mathbb{R})\) can be written as the sum of an even function \(h^+\) and an odd function \(h^-\), i.e., \(h = h^+ + h^-\) with \(h^+ \in F^+\) and \(h^- \in F^-\).
+        
+        \item \textbf{Intersection is Only the Zero Function}
+        
+        Suppose a function \(f\) is both even and odd. Then:
+        \[
+            f(-t) = f(t) \quad \text{(even)},
+        \]
+        \[
+            f(-t) = -f(t) \quad \text{(odd)}.
+        \]
+        Combining these equations, we get
+        \[
+            f(t) = -f(t),
+        \]
+        which implies
+        \[
+            f(t) = 0 \quad \text{for all } t \in \mathbb{R}.
+        \]
+        Therefore, the only function in \(F^+(\mathbb{R}, \mathbb{R}) \cap F^-(\mathbb{R}, \mathbb{R})\) is the zero function.
+    \end{enumerate}
+    
+    Since both conditions are satisfied, we conclude that
+    \[
+        F(\mathbb{R}, \mathbb{R}) = F^+(\mathbb{R}, \mathbb{R}) \oplus F^-(\mathbb{R}, \mathbb{R}).
+    \]
+
+    \qed
+\end{enumerate}
+
+
+\newpage
+
+\subsection*{Problem 5 (a)}
+
+\subsubsection*{Part 1}
+
+Let
+\[
+f(x)=\frac{1}{x^2+x-6},\quad g(x)=\frac{1}{x^2-5x+6},\quad h(x)=\frac{1}{x^2-9},
+\]
+and consider the vector space 
+\[
+V=F([0,1],\mathbb{R}).
+\]
+We wish to show that the set
+\[
+S=\{f(x),\,g(x),\,h(x)\}
+\]
+is linearly independent.
+
+\medskip
+
+\textbf{Step 1.1. Factor the Denominators.}  
+Observe that
+\[
+\begin{aligned}
+x^2+x-6 &= (x-2)(x+3),\\[1mm]
+x^2-5x+6 &= (x-2)(x-3),\\[1mm]
+x^2-9 &= (x-3)(x+3).
+\end{aligned}
+\]
+Since \(x-2\) and \(x-3\) are negative on \([0,1]\) and \(x+3>0\) on \([0,1]\), none of these factors vanish on the interval.
+
+\medskip
+
+\textbf{Step 1.2. Assume a Linear Combination Equals the Zero Function.}  
+Suppose there exist constants \(a\), \(b\), and \(c\) (not all zero) such that
+\[
+a\,f(x) + b\,g(x) + c\,h(x) = 0 \quad \text{for all } x\in [0,1].
+\]
+That is,
+\[
+a\frac{1}{(x-2)(x+3)} + b\frac{1}{(x-2)(x-3)} + c\frac{1}{(x-3)(x+3)} = 0.
+\]
+
+\medskip
+
+\textbf{Step 1.3. Clear the Denominators.}  
+Multiply the above equation by the common denominator \((x-2)(x-3)(x+3)\) (which is never zero on \([0,1]\)) to obtain
+\[
+a\,(x-3)(x+3) + b\,(x-2)(x+3) + c\,(x-2)(x-3) = 0 \quad \text{for all } x.
+\]
+Computing the products gives:
+\[
+\begin{aligned}
+(x-3)(x+3) &= x^2-9,\\[1mm]
+(x-2)(x+3) &= x^2+x-6,\\[1mm]
+(x-2)(x-3) &= x^2-5x+6.
+\end{aligned}
+\]
+Thus, the equation becomes
+\[
+a(x^2-9) + b(x^2+x-6) + c(x^2-5x+6)=0 \quad \text{for all } x.
+\]
+
+\medskip
+
+\textbf{Step 1.4. Equate Coefficients.}  
+Collect like terms:
+\[
+(a+b+c)x^2 + (b-5c)x + (-9a-6b+6c)=0.
+\]
+For this polynomial to be identically zero, each coefficient must vanish:
+\[
+\begin{cases}
+a+b+c=0,\\[1mm]
+b-5c=0,\\[1mm]
+-9a-6b+6c=0.
+\end{cases}
+\]
+From \(b-5c=0\) we have
+\[
+b=5c.
+\]
+Substitute into the first equation:
+\[
+a+5c+c = a+6c = 0 \quad \Longrightarrow \quad a=-6c.
+\]
+Substitute \(a=-6c\) and \(b=5c\) into the third equation:
+\[
+-9(-6c)-6(5c)+6c = 54c - 30c + 6c = 30c = 0.
+\]
+Thus, \(c=0\), and consequently, \(b=0\) and \(a=0\).  
+
+Since the only solution is \(a=b=c=0\), the functions \(f\), \(g\), and \(h\) are \textbf{linearly independent}.
+
+\bigskip
+
+\subsubsection*{Part 2}
+
+Let 
+\[
+V=F(\mathbb{R},\mathbb{R}) \quad \text{and} \quad S=\{x,\, e^x,\, e^{2x}\}.
+\]
+Assume there exist constants \(a\), \(b\), and \(c\) such that
+\[
+a\,x + b\,e^x + c\,e^{2x} = 0 \quad \text{for all } x\in\mathbb{R}.
+\]
+We wish to show that \(a=b=c=0\).
+
+\medskip
+
+A common strategy is to evaluate the function and its derivatives at a convenient point (say, \(x=0\)).
+
+\begin{enumerate}
+    \item \textbf{At \(x=0\):}  
+    \[
+    a\cdot 0 + b\,e^0 + c\,e^0 = b+c = 0 \quad \Longrightarrow \quad b+c=0.
+    \]
+    
+    \item \textbf{Differentiate once:}  
+    \[
+    \frac{d}{dx}\left(a\,x + b\,e^x + c\,e^{2x}\right) = a + b\,e^x + 2c\,e^{2x} = 0 \quad \text{for all } x.
+    \]
+    Evaluate at \(x=0\):
+    \[
+    a + b + 2c = 0.
+    \]
+    
+    \item \textbf{Differentiate a second time:}  
+    \[
+    \frac{d^2}{dx^2}\left(a\,x + b\,e^x + c\,e^{2x}\right) = b\,e^x + 4c\,e^{2x} = 0 \quad \text{for all } x.
+    \]
+    Evaluate at \(x=0\):
+    \[
+    b + 4c = 0.
+    \]
+\end{enumerate}
+
+Thus, we have the system:
+\[
+\begin{cases}
+b + c = 0,\\[1mm]
+a + b + 2c = 0,\\[1mm]
+b + 4c = 0.
+\end{cases}
+\]
+From the first equation, \(b=-c\). Substituting into the third equation:
+\[
+-c + 4c = 3c = 0 \quad \Longrightarrow \quad c=0.
+\]
+Then \(b=-c=0\). Finally, substitute into the second equation:
+\[
+a+0+0=0 \quad \Longrightarrow \quad a=0.
+\]
+
+Thus, \(a=b=c=0\), and the set \(\{x, e^x, e^{2x}\}\) is \textbf{linearly independent}.
+
+\bigskip
+
+\subsection*{Problem 5 (b)}
+
+We are given the matrices
+\[
+E_{11} = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix},\quad
+E_{12} = \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix},\quad
+E_{21} = \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix},\quad
+E_{22} = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix},
+\]
+which form a basis for \(M_{2\times 2}(\mathbb{R})\) since
+\[
+M_{2\times 2}(\mathbb{R}) = \operatorname{Span}\{E_{11},E_{12},E_{21},E_{22}\}.
+\]
+We must show that
+\[
+M_{2\times 2}(\mathbb{R}) = \operatorname{Span}\{A,B,C,D\},
+\]
+where
+\[
+\begin{aligned}
+A &= E_{12} + E_{21} + E_{22},\\[1mm]
+B &= E_{11} + E_{22},\\[1mm]
+C &= E_{12} + E_{21},\\[1mm]
+D &= E_{11} + E_{12} + E_{22}.
+\end{aligned}
+\]
+
+\medskip
+
+\textbf{Step 2.1. Express the Standard Basis Matrices in Terms of \(A, B, C, D\).}
+
+Since each of \(A\), \(B\), \(C\), and \(D\) is a linear combination of the \(E_{ij}\)'s, it suffices to show that every \(E_{ij}\) can be written as a linear combination of \(A\), \(B\), \(C\), and \(D\).
+
+\medskip
+
+1. \textbf{Expressing \(E_{11}\):}  
+Notice that
+\[
+B = E_{11} + E_{22} \quad \text{and} \quad D = E_{11} + E_{12} + E_{22}.
+\]
+Thus,
+\[
+D - B = (E_{11}+E_{12}+E_{22}) - (E_{11}+E_{22}) = E_{12}.
+\]
+Also, observe that
+\[
+C = E_{12} + E_{21} \quad \Longrightarrow \quad E_{21} = C - E_{12} = C - (D-B).
+\]
+A convenient expression for \(E_{11}\) is obtained by noting that
+\[
+E_{11} = B + C - A.
+\]
+\emph{Verification:}
+\[
+B+C-A = (E_{11}+E_{22}) + (E_{12}+E_{21}) - (E_{12}+E_{21}+E_{22}) = E_{11}.
+\]
+
+\medskip
+
+2. \textbf{Expressing \(E_{12}\):}  
+As already found,
+\[
+E_{12} = D - B.
+\]
+
+\medskip
+
+3. \textbf{Expressing \(E_{21}\):}  
+Since
+\[
+C = E_{12}+E_{21},
+\]
+and we have \(E_{12}=D-B\), it follows that
+\[
+E_{21} = C - (D-B) = C - D + B.
+\]
+
+\medskip
+
+4. \textbf{Expressing \(E_{22}\):}  
+From
+\[
+A = E_{12}+E_{21}+E_{22},
+\]
+and noting that \(C = E_{12}+E_{21}\), we have
+\[
+E_{22} = A - C.
+\]
+
+\medskip
+
+\textbf{Step 2.2. Conclude the Spanning.}  
+Since every standard basis element \(E_{11}\), \(E_{12}\), \(E_{21}\), and \(E_{22}\) can be written as a linear combination of \(A\), \(B\), \(C\), and \(D\), it follows that
+\[
+\operatorname{Span}\{A,B,C,D\} \supset \operatorname{Span}\{E_{11},E_{12},E_{21},E_{22}\} = M_{2\times 2}(\mathbb{R}).
+\]
+Conversely, each of \(A\), \(B\), \(C\), and \(D\) is clearly a linear combination of the \(E_{ij}\)'s, so
+\[
+\operatorname{Span}\{A,B,C,D\} \subset M_{2\times 2}(\mathbb{R}).
+\]
+Thus, we conclude that
+\[
+\operatorname{Span}\{A,B,C,D\} = M_{2\times 2}(\mathbb{R}).
+\]
+
+\bigskip
+
+\subsection*{Final Answers}
+
+\begin{itemize}
+    \item \textbf{(a)} 
+    \begin{itemize}
+        \item The set 
+        \[
+        \left\{\frac{1}{x^2+x-6},\, \frac{1}{x^2-5x+6},\, \frac{1}{x^2-9}\right\}
+        \]
+        in \(F([0,1],\mathbb{R})\) is \textbf{linearly independent}.
+        \item The set \(\{x, e^x, e^{2x}\}\) in \(F(\mathbb{R},\mathbb{R})\) is \textbf{linearly independent}.
+    \end{itemize}
+    
+    \item \textbf{(b)}  
+    We have shown that
+    \[
+    M_{2\times 2}(\mathbb{R}) = \operatorname{Span}\{E_{11},E_{12},E_{21},E_{22}\} = \operatorname{Span}\{E_{12}+E_{21}+E_{22},\, E_{11}+E_{22},\, E_{12}+E_{21},\, E_{11}+E_{12}+E_{22}\}.
+    \]
+    In particular, by expressing each standard basis element in terms of the latter set, we conclude that the four given matrices span \(M_{2\times 2}(\mathbb{R})\).
+\end{itemize}
+
+\vspace{3in}
+
+\begin{thebibliography}{9}
+\bibitem{proofwiki}
+ProofWiki Contributors. \textit{Real Vector Space is Vector Space}. ProofWiki. \url{https://proofwiki.org/wiki/Real_Vector_Space_is_Vector_Space}. Accessed January 28, 2025.
+
+\end{thebibliography}
+
 \end{document}
+
